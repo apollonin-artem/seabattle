@@ -6,29 +6,18 @@ import java.awt.*;
 /**
  * Created by aapollonin on 29.04.2015.
  */
-public class Grid extends JPanel {
-    public static final int FIELD_SIZE = 10;
+public class Grid {
+    private static final int FIELD_SIZE = 10;
 
-    private JButton[][] field;
-    private boolean[][] isShip;
-    private boolean[][] isFree;
-    private boolean[][] isShot;
+    private Cell[][] field;
 
     public Grid() {
-        setLayout(new GridLayout(FIELD_SIZE, FIELD_SIZE, 2, 2));
-        field = new JButton[FIELD_SIZE][FIELD_SIZE];
+        field = new Cell[FIELD_SIZE][FIELD_SIZE];
 
         for (int i = 0; i < FIELD_SIZE; i++) {
             for (int j = 0; j < FIELD_SIZE; j++) {
-                isFree[i][j] = true;
-                isShip[i][j] = false;
-                isShot[i][j] = false;
+                field[i][j] = new Cell();
             }
         }
     }
-
-    public void paint(Graphics g){
-        super.paint(g);
-    }
-
 }

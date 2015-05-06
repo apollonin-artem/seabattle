@@ -10,10 +10,8 @@ public class GameFrame extends JFrame {
 
     public GameFrame(int width, int design){
         super("Ахуеннейшая игра");
-        myGrid = new Grid();
-        // myGrid.setVisible(true);
 
-        setContentPane(myGrid);
+        setContentPane(new GridUI(new Grid()));
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(width, design);
     }
