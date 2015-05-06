@@ -1,7 +1,6 @@
 package ru.cinimex.seabattle.model;
 
-import javax.swing.*;
-import java.awt.*;
+import java.security.PublicKey;
 
 /**
  * Created by aapollonin on 29.04.2015.
@@ -20,4 +19,15 @@ public class Grid {
             }
         }
     }
+    public int getFieldSize(){return FIELD_SIZE;}
+
+    public Cell[][] getField() {
+        return field;
+    }
+
+    public void setField(Cell[][] field) {
+        this.field = field;
+    }
+
+
 }

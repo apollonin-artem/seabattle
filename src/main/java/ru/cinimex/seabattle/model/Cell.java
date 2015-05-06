@@ -1,6 +1,6 @@
 package ru.cinimex.seabattle.model;
 
-class Cell {
+public class Cell {
     private boolean isShip;
     private boolean isFree = true;
     private boolean isShot;
