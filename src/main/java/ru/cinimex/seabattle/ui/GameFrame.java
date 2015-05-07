@@ -1,5 +1,6 @@
 package ru.cinimex.seabattle.ui;
 
+import ru.cinimex.seabattle.model.Game;
 import ru.cinimex.seabattle.model.Grid;
 
 import javax.swing.*;
@@ -10,10 +11,12 @@ public class GameFrame extends JFrame {
     Grid myGrid;
     Box finalBox;
     Box box;
-    public GameFrame(int width, int design){
-        super("Ахуеннейшая игра");
-        GridUI ownField = new GridUI(new Grid());
-        GridUI enemyField = new GridUI(new Grid());
+    public GameFrame(int width, int design, Game game){
+        super("РђС…СѓРµРЅРЅРµР№С€Р°СЏ РёРіСЂР°");
+
+        GridUI ownField = new GridUI(game, game.getOwnGrid());
+        GridUI enemyField = new GridUI(game, game.getEnemyGrid());
+
         ownField.setMaximumSize(new Dimension(400,400));
         enemyField.setMaximumSize(new Dimension(400, 400));
         ownField.setMinimumSize(new Dimension(400, 400));
