@@ -1,7 +1,7 @@
 package ru.cinimex.seabattle.model;
 
-import ru.cinimex.seabattle.model.states.SetupState;
-import ru.cinimex.seabattle.model.states.State;
+import ru.cinimex.seabattle.states.SetupState;
+import ru.cinimex.seabattle.states.State;
 
 /**
  * Created by aapollonin on 07.05.2015.

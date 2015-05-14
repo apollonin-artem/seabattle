@@ -1,31 +1,56 @@
 package ru.cinimex.seabattle.model;
 
+import java.awt.*;
+
 public class Cell {
-    private boolean isShip;
-    private boolean isFree = true;
-    private boolean isShot;
+    private State state = State.FREE;
 
-    public boolean isShip() {
-        return isShip;
+    private int x;
+    private int y;
+
+    public Cell (int x, int y){
+        this.x = x;
+        this.y = y;
+
     }
 
-    public void setIsShip(boolean isShip) {
-        this.isShip = isShip;
+    public int getX() {
+        return x;
     }
 
-    public boolean isFree() {
-        return isFree;
+    public int getY() {
+        return y;
     }
 
-    public void setIsFree(boolean isFree) {
-        this.isFree = isFree;
+    public State getState() {
+        return state;
     }
 
-    public boolean isShot() {
-        return isShot;
+    public void setState(State state) {
+        this.state = state;
     }
 
-    public void setIsShot(boolean isShot) {
-        this.isShot = isShot;
+
+    public enum State {
+        SHIP(Color.GRAY),
+        FREE(Color.CYAN),
+        MISSED,
+        KILLED,
+        NEARSHIP(Color.yellow);
+
+
+        private Color color;
+
+        State() {
+            color = Color.RED;
+        }
+
+        State(Color color) {
+            this.color = color;
+        }
+
+        public Color getColor() {
+            return color;
+        }
     }
 }

@@ -1,7 +1,7 @@
 package ru.cinimex.seabattle.ui;
 
 import ru.cinimex.seabattle.model.Game;
-import ru.cinimex.seabattle.model.Grid;
+
 
 import javax.swing.*;
 import java.awt.*;
