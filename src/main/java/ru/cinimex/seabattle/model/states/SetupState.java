@@ -13,6 +13,7 @@ import java.awt.event.ActionEvent;
 public class SetupState extends State {
     @Override
     public void handleCellClick(ActionEvent e, Grid grid) {
-        ((JButton) e.getSource()).setBackground(Color.BLUE);        
+        ((JButton) e.getSource()).setBackground(Color.BLUE);
+
     }
 }

@@ -14,16 +14,16 @@ import java.awt.event.ActionListener;
  * Created by aapollonin on 30.04.2015.
  */
 public class GridUI extends JPanel {
-    private JButton[][] field;
+    private CellUI[][] field;
 
     public GridUI(final Game game, final Grid grid) {
-        field = new JButton[grid.getFieldSize()][grid.getFieldSize()];
+        field = new CellUI[grid.getFieldSize()][grid.getFieldSize()];
 
         setLayout(new GridLayout(10, 10, 2, 2));
 
         for (int i = 0; i < grid.getFieldSize(); i++) {
             for (int j = 0; j < grid.getFieldSize(); j++) {
-                field[i][j] = new JButton();
+                field[i][j] = new CellUI(grid.getCell(i,j),i,j);
 
                 field[i][j].addActionListener(new ActionListener() {
                     @Override

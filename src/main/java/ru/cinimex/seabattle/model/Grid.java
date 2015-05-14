@@ -21,13 +21,11 @@ public class Grid {
     }
     public int getFieldSize(){return FIELD_SIZE;}
 
-    public Cell[][] getField() {
-        return field;
+    public Cell getCell(int x, int y) {
+        return field[x][y];
     }
 
-    public void setField(Cell[][] field) {
-        this.field = field;
-    }
+
 
 
 }
