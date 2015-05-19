@@ -32,25 +32,10 @@ public class Cell {
 
 
     public enum State {
-        SHIP(Color.GRAY),
-        FREE(Color.CYAN),
+        SHIP,
+        FREE,
         MISSED,
         KILLED,
-        NEARSHIP(Color.yellow);
-
-
-        private Color color;
-
-        State() {
-            color = Color.RED;
-        }
-
-        State(Color color) {
-            this.color = color;
-        }
-
-        public Color getColor() {
-            return color;
-        }
+        NEARSHIP
     }
 }
