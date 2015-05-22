@@ -56,17 +56,19 @@ public class ShipSelector extends JPanel {
 
     }
 
-    public void setDisableHitPointsRadioButton(int i) {
-        battleship[i-1].setEnabled(false);
+    public boolean setDisableHitPointsRadioButton(int i) {
+        boolean flag = false;
+        battleship[i - 1].setEnabled(false);
         Enumeration<AbstractButton> choices = hitPointsGroup.getElements();
         while (choices.hasMoreElements()) {
             HitPointsRadioButton choice = (HitPointsRadioButton) choices.nextElement();
             if (!choice.isSelected() && choice.isEnabled()) {
                 choice.setSelected(true);
+                flag = true;
                 break;
             }
-
         }
+        return flag;
     }
 
     public int getShipHitpoints() {

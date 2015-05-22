@@ -1,5 +1,6 @@
 package ru.cinimex.seabattle.model;
 
+import ru.cinimex.seabattle.states.GameState;
 import ru.cinimex.seabattle.states.SetupState;
 import ru.cinimex.seabattle.states.State;
 
@@ -15,6 +16,13 @@ public class Game {
 
     private Grid ownGrid = new Grid();
     private Grid enemyGrid = new Grid();
+
+    public Game() {
+        enemyGrid.setHorizontalShip(0,0,1);
+        enemyGrid.setHorizontalShip(0,9,4);
+        enemyGrid.setHorizontalShip(5,5,2);
+        enemyGrid.setHorizontalShip(1,5,2);
+    }
 
     public Grid getOwnGrid() {
         return ownGrid;

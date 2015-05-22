@@ -35,12 +35,15 @@ public class GridUI extends JPanel {
 
                         if (ship != null && state.handleCellClick(ship, cell, grid)) {
                             if (state.getShipType(ship.getHitPoints()).isComplete()) {
-                                shipSelector.setDisableHitPointsRadioButton(ship.getHitPoints());
+                                if (!shipSelector.setDisableHitPointsRadioButton(ship.getHitPoints())) {
+                                    game.setState(new GameState());
+                                }
                             }
                         }
 
                     } else if (game.getState() instanceof GameState) {
-                        throw new NotImplementedException();
+                        GameState state = (GameState) game.getState();
+                            state.handleCellClick(cell,grid);
                     }
 
                     GridUI.this.repaint();

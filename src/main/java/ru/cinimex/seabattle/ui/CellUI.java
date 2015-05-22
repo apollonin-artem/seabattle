@@ -18,6 +18,7 @@ public class CellUI extends JButton{
         COLOR_MAPPING.put(Cell.State.SHIP, Color.GRAY);
         COLOR_MAPPING.put(Cell.State.FREE, Color.CYAN);
         COLOR_MAPPING.put(Cell.State.NEARSHIP, Color.YELLOW);
+        COLOR_MAPPING.put(Cell.State.MISSED, new Color(224,255,255));
     }
 
     private Cell cell;
